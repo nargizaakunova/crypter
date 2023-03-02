@@ -5,7 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crypter</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/ico" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <div class="header__nav_left">
+            <a class="header__logo" href="#">
+              <img class="header__logo-img" src="img/logo.png" alt="Logo" />
+              <h1 class="header__logo-title">crypter</h1>
+            </a>
+            <div class="header__logo-divider"></div>
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="#">Discover</a>
+              </li>
+              <li class="header__nav-item header__nav-item_light">
+                <a href="#">How it works</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__nav_right">
+            <label class="header__label">
+              <input
+                class="header__search"
+                type="search"
+                placeholder="Search"
+              />
+            </label>
+
+            <a class="header__icon-bell" href=""
+              ><img src="img/bell.svg" alt="bell"
+            /></a>
+            <a class="header__nav-btn header__nav-btn_upload" href="">Upload</a>
+            <a class="header__nav-btn header__nav-btn_connect" href=""
+              >Connect Wallet</a
+            >
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
 </html>
