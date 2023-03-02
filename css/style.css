@@ -26,6 +26,163 @@ body {
   margin: 0 auto;
 }
 
+.subheading-2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+  color: #777e90;
+  margin-bottom: 0.8rem;
+}
+
+.heading-1 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 6.4rem;
+  line-height: 6.4rem;
+  letter-spacing: -0.02em;
+  color: #23262f;
+}
+
+.heading-2 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+  letter-spacing: -0.02em;
+  color: #141416;
+}
+
+.heading-3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: -0.01em;
+  color: #23262f;
+  margin-bottom: 2.4rem;
+}
+
+.heading-4 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  letter-spacing: -0.01em;
+  color: #141416;
+}
+
+.eth {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #45b26b;
+  width: 68px;
+  height: 26px;
+  border: 2px solid #45b36b;
+  border-radius: 4px;
+}
+
+.body-1,
+.body-1-bold {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #23262f;
+}
+
+.body-1-bold {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.body-2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: #777e90;
+}
+
+.body-2_small,
+.body-2_small-light {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #23262f;
+}
+
+.body-2_small-light {
+  color: #777e90;
+}
+
+.button-1 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  color: #23262f;
+  border: 2px solid #e6e8ec;
+  border-radius: 90px;
+  padding: 1.6rem 2.4rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button-1_blue {
+  background-color: #3772ff;
+  color: #fcfcfd;
+  border: none;
+}
+
+.icon-img {
+  background: #e4d7cf;
+  border-radius: 48px;
+}
+
+.icon-img_without-background {
+  background: none;
+}
+
+.caption-2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #777e90;
+}
+
+.caption-bold,
+.caption-bold_light {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: #23262f;
+}
+
+.caption-bold_light {
+  color: #353945;
+}
+
 /* HEADER */
 .header {
   border-bottom: 2px solid #fcfcfd;
@@ -159,4 +316,104 @@ body {
   color: #23262f;
   border: 2px solid #e6e8ec;
   background-color: #fcfcfd;
+}
+
+/* SECTION NEW CREATIVE ECONOMY */
+.new-economy {
+  padding-top: 12.8rem;
+  padding-bottom: 12rem;
+}
+.new-economy-top {
+  text-align: center;
+}
+.new-economy-middle {
+  display: flex;
+  justify-content: space-between;
+  gap: 12.8rem;
+  padding-top: 12.8rem;
+  padding-bottom: 14rem;
+}
+.new-economy-middle__left {
+  position: relative;
+}
+.new-economy-middle__img {
+  max-width: 64rem;
+  width: 100%;
+}
+.new-economy-middle__frame {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 0;
+  max-width: 62.4rem;
+  width: 100%;
+}
+.new-economy-middle__right {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 35.2rem;
+}
+.new-economy-middle__icons {
+  display: flex;
+  gap: 6.55rem;
+  margin-top: 2rem;
+}
+.new-economy-middle__icon {
+  display: flex;
+  gap: 0.8rem;
+}
+.new-economy-middle__card-count {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  background: #fcfcfd;
+  border: 2px solid #e6e8ec;
+  box-shadow: 0px 64px 64px -48px rgba(31, 47, 70, 0.12);
+  border-radius: 2.4rem;
+  padding: 3.2rem 0;
+}
+.new-economy-middle__card-time {
+  display: flex;
+  gap: 1.95rem;
+  justify-content: center;
+}
+.new-economy-middle__btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.new-economy-middle__pagination {
+  display: flex;
+  align-items: center;
+}
+.new-economy-middle__pagination_arrow {
+  color: #777e90;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  border: none;
+  background: none;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+.new-economy-middle__pagination_arrow-border {
+  border: 2px solid #e6e8ec;
+  border-radius: 4rem;
+  text-align: center;
+}
+.new-economy-bottom__col-1 .illustration {
+  margin-right: 1.6rem;
+}
+.new-economy-bottom__col-1 .avatar {
+  width: 4.8rem;
+  height: 4.8rem;
+  background: #e6e8ec;
+  border-radius: 4.8rem;
+}
+.new-economy-bottom__info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 44.8rem;
+  margin-top: 1.4rem;
 }/*# sourceMappingURL=style.css.map */
