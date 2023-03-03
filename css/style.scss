@@ -13,6 +13,7 @@ $neutrals-2: #23262f;
 $neutrals-3: #353945;
 $neutrals-4: #777e90;
 $neutrals-6: #e6e8ec;
+$neutrals-7: #f4f5f6;
 $neutrals-8: #fcfcfd;
 
 /* GENERAL STYLE */
@@ -41,9 +42,31 @@ body {
   margin-bottom: 2rem;
 }
 
+.color-neutrals-4 {
+  color: $neutrals-4 !important;
+}
+
+.background-violet {
+  background-color: $violet !important;
+}
+
+.background-green {
+  background-color: $green !important;
+}
+
+.background-neutral-2 {
+  background-color: $neutrals-2 !important;
+}
+
 .container {
   width: calc(1440px - 320px);
   margin: 0 auto;
+}
+
+.hr {
+  border-top: 0;
+  border-bottom: 1px solid $neutrals-6;
+  margin: 2.4rem 0;
 }
 
 .subheading-2 {
@@ -158,6 +181,10 @@ body {
 
 .body-2_small-light {
   color: $neutrals-4;
+}
+
+.color-neutrals-3 {
+  color: $neutrals-3 !important;
 }
 
 .button-1 {
@@ -537,7 +564,7 @@ body {
     display: flex;
 
     &__col-1 {
-      margin-right: 3rem;
+      margin-right: 5.2rem;
 
       .avatar {
         width: 4.8rem;
@@ -558,7 +585,7 @@ body {
     &__col-2 {
       display: flex;
       flex-direction: column;
-      gap: 2.9rem;
+      gap: 5.2rem;
       max-width: 35.1rem;
       margin-right: 6.4rem;
 
@@ -588,10 +615,10 @@ body {
         display: flex;
         gap: 1.6rem;
         position: relative;
-        margin-bottom: 4rem;
+        margin-bottom: 4.8rem;
 
         div.helper::after {
-          content: '6';
+          content: attr(num);
           position: absolute;
           width: 2.4rem;
           height: 2.4rem;
@@ -631,6 +658,114 @@ body {
       height: 51.2rem;
       background: $neutrals-6;
       left: -3.2rem;
+    }
+  }
+}
+
+/* SECTION SELLERS */
+
+.sellers {
+  padding: 12.8rem 8.8rem;
+  background-color: $neutrals-7;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6rem;
+    margin-bottom: 6.4rem;
+
+    .icon {
+      position: relative;
+      top: -4px;
+      left: 10px;
+    }
+    .select {
+      -webkit-appearance: none !important;
+      -moz-appearance: none !important;
+      height: 48px;
+      width: 256px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAAdVBMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhMdQaAAAAJ3RSTlMAAAECAwQGBwsOFBwkJTg5RUZ4eYCHkJefpaytrsXGy8zW3+Do8vNn0bsyAAAAYElEQVR42tXROwJDQAAA0Ymw1p9kiT+L5P5HVEi3qJn2lcPjtIuzUIJ/rhIGy762N3XaThqMN1ZPALsZPEzG1x8LrFL77DHBnEMxBewz0fJ6LyFHTPL7xhwzWYrJ9z22AqmQBV757MHfAAAAAElFTkSuQmCC);
+      background-color: $neutrals-8;
+      background-position: 100%;
+      background-repeat: no-repeat;
+      border: 2px solid $neutrals-6;
+      border-radius: 1.2rem;
+      padding: 1.2rem 1.6rem;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .cards {
+      display: flex;
+      gap: 3.2rem;
+
+      .card.active {
+        height: 26.3rem;
+        box-shadow: 0px 64px 64px -48px rgba(31, 47, 70, 0.12);
+      }
+
+      .card {
+        background-color: $neutrals-8;
+        padding: 2.4rem;
+        border-radius: 16px;
+        width: 198px;
+        height: 24.7rem;
+        cursor: pointer;
+
+        &__top {
+          display: flex;
+          &-badge {
+            display: inline-flex;
+            padding: 4px 8px;
+            background-color: $blue;
+            color: $neutrals-8;
+            border-radius: 24px;
+            gap: 4px;
+            margin-right: auto;
+
+            span {
+              font-family: $primary-font;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 1.2rem;
+              line-height: 2rem;
+              color: $neutrals-8;
+            }
+          }
+        }
+
+        &__bottom {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          &-img {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 2rem;
+
+            img.avatar {
+              width: 100%;
+              background: #e4d7cf;
+              border-radius: 48px;
+            }
+            img.diamond {
+              position: relative;
+              bottom: 3rem;
+              left: 4.2rem;
+            }
+          }
+          .name {
+            margin-bottom: 0.2rem;
+          }
+        }
+      }
     }
   }
 }
