@@ -240,6 +240,12 @@ body {
   height: 40px;
 }
 
+.icon-tiny {
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 4.8rem;
+}
+
 .icon-img_big {
   width: 56px;
   height: 56px;
@@ -822,6 +828,48 @@ body {
         &-left {
           display: flex;
           gap: 0.4rem;
+        }
+      }
+    }
+  }
+}
+
+/* SECTION HOT COLLECTIONS */
+.hot-collections {
+  padding: 12.8rem 16rem;
+  background-color: $neutrals-7;
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6.8rem;
+
+    .hot-coll-card {
+      max-width: 35.2rem;
+
+      .hot-coll-3cards {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.2rem;
+      }
+      .hot-coll-by-whom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &_left {
+          display: flex;
+          gap: 1.2rem;
+        }
+
+        .items-num {
+          font-family: $primary-font;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 1.2rem;
+          line-height: 1.2rem;
+          text-transform: uppercase;
+          color: $neutrals-2;
         }
       }
     }

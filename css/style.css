@@ -223,6 +223,12 @@ body {
   height: 40px;
 }
 
+.icon-tiny {
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 4.8rem;
+}
+
 .icon-img_big {
   width: 56px;
   height: 56px;
@@ -747,4 +753,41 @@ body {
 .hot-bid__cards .hot-card__bottom-left {
   display: flex;
   gap: 0.4rem;
+}
+
+/* SECTION HOT COLLECTIONS */
+.hot-collections {
+  padding: 12.8rem 16rem;
+  background-color: #f4f5f6;
+}
+.hot-collections__cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6.8rem;
+}
+.hot-collections__cards .hot-coll-card {
+  max-width: 35.2rem;
+}
+.hot-collections__cards .hot-coll-card .hot-coll-3cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+.hot-collections__cards .hot-coll-card .hot-coll-by-whom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hot-collections__cards .hot-coll-card .hot-coll-by-whom_left {
+  display: flex;
+  gap: 1.2rem;
+}
+.hot-collections__cards .hot-coll-card .hot-coll-by-whom .items-num {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+  color: #23262f;
 }/*# sourceMappingURL=style.css.map */
