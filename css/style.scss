@@ -5,6 +5,9 @@ $secondary-font: 'DM Sans';
 /* COLORS */
 $blue: #3772ff;
 $green: #45b26b;
+$violet: #9757d7;
+$yellow: #ffd166;
+$pink: #ef466f;
 $neutrals-1: #141416;
 $neutrals-2: #23262f;
 $neutrals-3: #353945;
@@ -32,6 +35,10 @@ body {
   font-weight: 500;
   line-height: 2.4rem;
   color: $neutrals-2;
+}
+
+.margin-btm-2rem {
+  margin-bottom: 2rem;
 }
 
 .container {
@@ -130,6 +137,15 @@ body {
   color: $neutrals-4;
 }
 
+.body-2_bold {
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: $neutrals-2;
+}
+
 .body-2_small,
 .body-2_small-light {
   font-family: $primary-font;
@@ -139,6 +155,7 @@ body {
   line-height: 2.4rem;
   color: $neutrals-2;
 }
+
 .body-2_small-light {
   color: $neutrals-4;
 }
@@ -163,9 +180,68 @@ body {
   border: none;
 }
 
+.button-2,
+.button-2_blue {
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: $neutrals-2;
+  background: none;
+  padding: 0.8rem 1.2rem;
+  border: 2px solid $neutrals-6;
+  border-radius: 90px;
+  cursor: pointer;
+}
+
+.button-2_blue {
+  background-color: $blue;
+  color: $neutrals-8;
+  border: none;
+}
+
 .icon-img {
   background: #e4d7cf;
   border-radius: 48px;
+  width: 40px;
+  height: 40px;
+}
+
+.icon-img_big {
+  width: 56px;
+  height: 56px;
+  border-radius: 48px;
+}
+
+.icon-img_small,
+.icon-img_small-violet,
+.icon-img_small-yellow,
+.icon-img_small-pink,
+.icon-img_small-neutral {
+  width: 24px;
+  height: 24px;
+  border-radius: 48px;
+}
+
+.icon-img_small-violet,
+.icon-img_big-violet {
+  background-color: $violet;
+}
+
+.icon-img_small-yellow,
+.icon-img_big-yellow {
+  background-color: $yellow;
+}
+
+.icon-img_small-pink,
+.icon-img_big-pink {
+  background-color: $pink;
+}
+
+.icon-img_small-neutral,
+.icon-img_big-neutral {
+  background-color: $neutrals-6;
 }
 
 .icon-img_without-background {
@@ -178,6 +254,24 @@ body {
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 2rem;
+  color: $neutrals-4;
+}
+
+.caption-2_bold {
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: $neutrals-4;
+}
+
+.caption-2_bold-light {
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
   color: $neutrals-4;
 }
 
@@ -440,10 +534,11 @@ body {
   }
 
   &-bottom {
+    display: flex;
+
     &__col-1 {
-      .illustration {
-        margin-right: 1.6rem;
-      }
+      margin-right: 3rem;
+
       .avatar {
         width: 4.8rem;
         height: 4.8rem;
@@ -451,12 +546,91 @@ body {
         border-radius: 4.8rem;
       }
     }
+
     &__info {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       max-width: 44.8rem;
       margin-top: 1.4rem;
+    }
+
+    &__col-2 {
+      display: flex;
+      flex-direction: column;
+      gap: 2.9rem;
+      max-width: 35.1rem;
+      margin-right: 6.4rem;
+
+      .news-card {
+        gap: 2.4rem;
+        display: flex;
+
+        img.illustration {
+          max-width: 16rem;
+          max-height: 14.8rem;
+          border-radius: 12px;
+        }
+
+        &__items {
+          display: flex;
+          gap: 1.1rem;
+          align-items: center;
+          margin-bottom: 1.6rem;
+          margin-top: 0.8rem;
+        }
+      }
+    }
+    &__col-3 {
+      position: relative;
+
+      .card-creators {
+        display: flex;
+        gap: 1.6rem;
+        position: relative;
+        margin-bottom: 4rem;
+
+        div.helper::after {
+          content: '6';
+          position: absolute;
+          width: 2.4rem;
+          height: 2.4rem;
+          background: $neutrals-2;
+          color: $neutrals-8;
+          border: 2px solid $neutrals-8;
+          border-radius: 64px;
+          top: -4px;
+          left: -8px;
+          text-align: center;
+        }
+
+        img.icon-img_big {
+          position: relative;
+        }
+      }
+
+      .card-creators::after {
+        content: '';
+        position: absolute;
+        width: 22.4rem;
+        height: 1px;
+        background: $neutrals-6;
+        bottom: -2rem;
+      }
+
+      .card-creators.without-hr::after {
+        content: '';
+        width: 0;
+      }
+    }
+
+    &__col-3::before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 51.2rem;
+      background: $neutrals-6;
+      left: -3.2rem;
     }
   }
 }
