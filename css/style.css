@@ -52,6 +52,11 @@ body {
   margin: 2.4rem 0;
 }
 
+.hr-standard {
+  border-top: 0;
+  border-bottom: 1px solid #e6e8ec;
+}
+
 .subheading-2 {
   font-family: "Poppins";
   font-style: normal;
@@ -700,4 +705,46 @@ body {
 }
 .sellers__bottom .cards .card__bottom .name {
   margin-bottom: 0.2rem;
+}
+
+/* SECTION HOT BIDS */
+.hot-bid {
+  padding: 13.6rem 16rem;
+}
+.hot-bid__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+}
+.hot-bid__cards {
+  display: flex;
+  justify-content: space-between;
+}
+.hot-bid__cards .hot-card {
+  max-width: 25.6rem;
+}
+.hot-bid__cards .hot-card__img {
+  width: 100%;
+  margin-bottom: 2.1rem;
+}
+.hot-bid__cards .hot-card__middle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+.hot-bid__cards .hot-card__middle-left h3 {
+  margin-bottom: 1.2rem;
+}
+.hot-bid__cards .hot-card__middle-right p {
+  margin-bottom: 1.2rem;
+}
+.hot-bid__cards .hot-card__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+  align-items: center;
+}
+.hot-bid__cards .hot-card__bottom-left {
+  display: flex;
+  gap: 0.4rem;
 }/*# sourceMappingURL=style.css.map */
