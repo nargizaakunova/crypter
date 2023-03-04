@@ -85,6 +85,16 @@ body {
   border-bottom: 1px solid $neutrals-6;
 }
 
+.subheading-1 {
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+  color: $neutrals-4;
+}
+
 .subheading-2 {
   font-family: $primary-font;
   font-style: normal;
@@ -962,5 +972,43 @@ body {
   }
   hr {
     margin-bottom: 3.2rem;
+  }
+}
+
+/* SECTION EARN CRYPTO */
+.earn-crypto {
+  padding: 8rem 0;
+  background-color: $neutrals-8;
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__left {
+    flex-shrink: 0;
+    flex-basis: 54.5rem;
+    .save-time-subheading {
+      margin-bottom: 1.2rem;
+    }
+    .earn-heading {
+      margin-bottom: 2rem;
+    }
+    .creative-info {
+      font-weight: 400;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  &__right {
+    max-width: 64rem;
+    &-img {
+      width: 100%;
+    }
   }
 }

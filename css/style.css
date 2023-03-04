@@ -69,6 +69,16 @@ body {
   border-bottom: 1px solid #e6e8ec;
 }
 
+.subheading-1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+  color: #777e90;
+}
+
 .subheading-2 {
   font-family: "Poppins";
   font-style: normal;
@@ -866,4 +876,39 @@ body {
 }
 .discover hr {
   margin-bottom: 3.2rem;
+}
+
+/* SECTION EARN CRYPTO */
+.earn-crypto {
+  padding: 8rem 0;
+  background-color: #fcfcfd;
+}
+.earn-crypto__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.earn-crypto__left {
+  flex-shrink: 0;
+  flex-basis: 54.5rem;
+}
+.earn-crypto__left .save-time-subheading {
+  margin-bottom: 1.2rem;
+}
+.earn-crypto__left .earn-heading {
+  margin-bottom: 2rem;
+}
+.earn-crypto__left .creative-info {
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+.earn-crypto__buttons {
+  display: flex;
+  gap: 1.6rem;
+}
+.earn-crypto__right {
+  max-width: 64rem;
+}
+.earn-crypto__right-img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
