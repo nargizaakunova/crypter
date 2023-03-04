@@ -12,6 +12,7 @@ $neutrals-1: #141416;
 $neutrals-2: #23262f;
 $neutrals-3: #353945;
 $neutrals-4: #777e90;
+$neutrals-5: #b1b5c4;
 $neutrals-6: #e6e8ec;
 $neutrals-7: #f4f5f6;
 $neutrals-8: #fcfcfd;
@@ -45,7 +46,17 @@ body {
 .color-neutrals-4 {
   color: $neutrals-4 !important;
 }
+.color-neutrals-5 {
+  color: $neutrals-5 !important;
+}
 
+.color-neutrals-8 {
+  color: $neutrals-8 !important;
+}
+
+.borderless {
+  border: none !important;
+}
 .background-violet {
   background-color: $violet !important;
 }
@@ -138,6 +149,22 @@ body {
   height: 26px;
   border: 2px solid #45b36b;
   border-radius: 4px;
+}
+
+.select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  height: 48px;
+  width: 256px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAAdVBMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhMdQaAAAAJ3RSTlMAAAECAwQGBwsOFBwkJTg5RUZ4eYCHkJefpaytrsXGy8zW3+Do8vNn0bsyAAAAYElEQVR42tXROwJDQAAA0Ymw1p9kiT+L5P5HVEi3qJn2lcPjtIuzUIJ/rhIGy762N3XaThqMN1ZPALsZPEzG1x8LrFL77DHBnEMxBewz0fJ6LyFHTPL7xhwzWYrJ9z22AqmQBV757MHfAAAAAElFTkSuQmCC);
+  background-color: $neutrals-8;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  border: 2px solid $neutrals-6;
+  border-radius: 1.2rem;
+  padding: 1.2rem 1.6rem;
+  outline: none;
+  cursor: pointer;
 }
 
 .body-1,
@@ -691,21 +718,6 @@ body {
       top: -4px;
       left: 10px;
     }
-    .select {
-      -webkit-appearance: none !important;
-      -moz-appearance: none !important;
-      height: 48px;
-      width: 256px;
-      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAAdVBMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhMdQaAAAAJ3RSTlMAAAECAwQGBwsOFBwkJTg5RUZ4eYCHkJefpaytrsXGy8zW3+Do8vNn0bsyAAAAYElEQVR42tXROwJDQAAA0Ymw1p9kiT+L5P5HVEi3qJn2lcPjtIuzUIJ/rhIGy762N3XaThqMN1ZPALsZPEzG1x8LrFL77DHBnEMxBewz0fJ6LyFHTPL7xhwzWYrJ9z22AqmQBV757MHfAAAAAElFTkSuQmCC);
-      background-color: $neutrals-8;
-      background-position: 100%;
-      background-repeat: no-repeat;
-      border: 2px solid $neutrals-6;
-      border-radius: 1.2rem;
-      padding: 1.2rem 1.6rem;
-      outline: none;
-      cursor: pointer;
-    }
   }
 
   &__bottom {
@@ -794,6 +806,8 @@ body {
   &__cards {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 5.2rem;
 
     .hot-card {
       max-width: 25.6rem;
@@ -801,6 +815,7 @@ body {
       &__img {
         width: 100%;
         margin-bottom: 2.1rem;
+        border-radius: 16px;
       }
 
       &__middle {
@@ -847,11 +862,16 @@ body {
     .hot-coll-card {
       max-width: 35.2rem;
 
+      .hot-coll-img {
+        border-radius: 8px;
+      }
+
       .hot-coll-3cards {
         display: flex;
         justify-content: space-between;
         margin-bottom: 1.2rem;
       }
+
       .hot-coll-by-whom {
         display: flex;
         justify-content: space-between;
@@ -873,5 +893,74 @@ body {
         }
       }
     }
+  }
+}
+
+/* SECTION DISCOVER */
+.discover {
+  padding: 12.8em 16rem;
+  background-color: $neutrals-8;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8rem;
+    margin-bottom: 3.2rem;
+
+    .nav-left {
+      select {
+        width: 18rem;
+      }
+    }
+
+    .nav-right {
+      a {
+        margin-right: 0;
+        display: inline-block;
+        width: 116px;
+      }
+    }
+  }
+
+  &__filters {
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 3.4rem;
+
+    .discover-filter {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+
+      .scrollbar-img {
+        height: 6rem;
+        position: relative;
+      }
+
+      .discover-eths {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -1.8rem;
+      }
+    }
+    .discover-filter.different {
+      gap: 0;
+    }
+  }
+  &__button {
+    display: block;
+    margin: 5.2rem auto 0;
+    width: 13.2rem;
+    height: 4rem;
+
+    &-svg {
+      position: relative;
+      top: 0.35rem;
+      left: 0.4rem;
+    }
+  }
+  hr {
+    margin-bottom: 3.2rem;
   }
 }
