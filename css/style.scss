@@ -43,9 +43,22 @@ body {
   margin-bottom: 2rem;
 }
 
+.margin-btm-2p4rem {
+  margin-bottom: 2.4rem;
+}
+
+.color-blue {
+  color: $blue !important;
+}
+
+.color-neutrals-2 {
+  color: $neutrals-2 !important;
+}
+
 .color-neutrals-4 {
   color: $neutrals-4 !important;
 }
+
 .color-neutrals-5 {
   color: $neutrals-5 !important;
 }
@@ -178,7 +191,8 @@ body {
 }
 
 .body-1,
-.body-1-bold {
+.body-1-bold,
+.body-1-light {
   font-family: $primary-font;
   font-style: normal;
   font-weight: 500;
@@ -191,6 +205,12 @@ body {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
+}
+
+.body-1-light {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
 }
 
 .body-2 {
@@ -227,6 +247,15 @@ body {
 
 .color-neutrals-3 {
   color: $neutrals-3 !important;
+}
+
+.nav-link {
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: $neutrals-4;
 }
 
 .button-1 {
@@ -1009,6 +1038,93 @@ body {
     max-width: 64rem;
     &-img {
       width: 100%;
+    }
+  }
+}
+
+/* FOOTER */
+.footer {
+  padding: 8rem 0 3.2rem;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4.8rem;
+  }
+
+  &__col-1 {
+    flex-basis: 22.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    margin-right: 19.2rem;
+  }
+
+  &__col-2 {
+    .footer-section-heading {
+      margin-bottom: 4rem;
+      min-width: 16rem;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+  }
+
+  &__col-4 {
+    width: 35.2rem;
+
+    .footer-section-heading {
+      margin-bottom: 4rem;
+    }
+
+    .footer__label {
+      position: relative;
+    }
+
+    .footer__label::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      bottom: -10px;
+      right: 1rem;
+      width: 3.2rem;
+      cursor: pointer;
+      background: url('../img/footer-circle-button.svg') center no-repeat;
+    }
+
+    .footer__search {
+      padding: 0 1.6rem;
+      border: 2px solid #e6e8ec;
+      border-radius: 90px;
+      width: 35.2rem;
+      height: 4.8rem;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .footer__search[type='search']::-webkit-search-cancel-button {
+      appearance: none;
+    }
+
+    .footer__search::placeholder {
+      font-family: $primary-font;
+      font-style: normal;
+      font-size: 1.2rem;
+      line-height: 2rem;
+      color: $neutrals-4;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.2rem;
+
+    .footer-accept {
+      margin-left: 1.6rem;
     }
   }
 }

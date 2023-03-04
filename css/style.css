@@ -25,6 +25,18 @@ body {
   margin-bottom: 2rem;
 }
 
+.margin-btm-2p4rem {
+  margin-bottom: 2.4rem;
+}
+
+.color-blue {
+  color: #3772ff !important;
+}
+
+.color-neutrals-2 {
+  color: #23262f !important;
+}
+
 .color-neutrals-4 {
   color: #777e90 !important;
 }
@@ -162,7 +174,8 @@ body {
 }
 
 .body-1,
-.body-1-bold {
+.body-1-bold,
+.body-1-light {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
@@ -175,6 +188,12 @@ body {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
+}
+
+.body-1-light {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
 }
 
 .body-2 {
@@ -211,6 +230,15 @@ body {
 
 .color-neutrals-3 {
   color: #353945 !important;
+}
+
+.nav-link {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #777e90;
 }
 
 .button-1 {
@@ -911,4 +939,84 @@ body {
 }
 .earn-crypto__right-img {
   width: 100%;
+}
+
+/* FOOTER */
+.footer {
+  padding: 8rem 0 3.2rem;
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4.8rem;
+}
+.footer__col-1 {
+  flex-basis: 22.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin-right: 19.2rem;
+}
+.footer__col-2 .footer-section-heading {
+  margin-bottom: 4rem;
+  min-width: 16rem;
+}
+.footer__col-2-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.footer__col-4 {
+  width: 35.2rem;
+}
+.footer__col-4 .footer-section-heading {
+  margin-bottom: 4rem;
+}
+.footer__col-4 .footer__label {
+  position: relative;
+}
+.footer__col-4 .footer__label::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  right: 1rem;
+  width: 3.2rem;
+  cursor: pointer;
+  background: url("../img/footer-circle-button.svg") center no-repeat;
+}
+.footer__col-4 .footer__search {
+  padding: 0 1.6rem;
+  border: 2px solid #e6e8ec;
+  border-radius: 90px;
+  width: 35.2rem;
+  height: 4.8rem;
+  outline: none;
+  cursor: pointer;
+}
+.footer__col-4 .footer__search[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+.footer__col-4 .footer__search::-moz-placeholder {
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #777e90;
+}
+.footer__col-4 .footer__search::placeholder {
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #777e90;
+}
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.2rem;
+}
+.footer__bottom .footer-accept {
+  margin-left: 1.6rem;
 }/*# sourceMappingURL=style.css.map */
