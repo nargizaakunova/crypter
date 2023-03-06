@@ -39,6 +39,13 @@ body {
   color: $neutrals-2;
 }
 
+.hamburger-menu {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
 .margin-btm-2rem {
   margin-bottom: 2rem;
 }
@@ -83,8 +90,14 @@ body {
 }
 
 .container {
-  width: calc(1440px - 320px);
+  max-width: 112rem;
   margin: 0 auto;
+  padding: 0 32px;
+
+  @media (max-width: 1024px) {
+    max-width: 864px;
+    padding: 0 32px;
+  }
 }
 
 .hr {
@@ -407,6 +420,10 @@ body {
     &-list {
       display: flex;
       gap: 3.2rem;
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
     }
 
     &-item {
@@ -434,6 +451,10 @@ body {
     &_right {
       display: flex;
       align-items: center;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
   }
 
@@ -463,6 +484,10 @@ body {
       width: 0.2rem;
       height: 4rem;
       margin-right: 3.2rem;
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
     }
   }
 
@@ -550,29 +575,79 @@ body {
   padding-top: 12.8rem;
   padding-bottom: 12rem;
 
+  @media (max-width: 1024px) {
+    padding-top: 11.2rem;
+    padding-bottom: 8rem;
+  }
+  @media (max-width: 768px) {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+  }
+
   &-top {
     text-align: center;
   }
+
   &-middle {
     display: flex;
     justify-content: space-between;
-    gap: 12.8rem;
     padding-top: 12.8rem;
     padding-bottom: 14rem;
+    gap: 3.2rem;
+
+    @media (max-width: 1024px) {
+      padding-top: 11.2rem;
+    }
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 6.4rem;
+    }
 
     &__left {
       position: relative;
-    }
-    &__img {
-      max-width: 64rem;
       width: 100%;
     }
-    &__frame {
-      position: absolute;
-      bottom: 0.6rem;
-      left: 0;
-      max-width: 62.4rem;
-      width: 100%;
+
+    &__img-1 {
+      max-width: 100%;
+      border-radius: 16px;
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &__img-2 {
+      max-width: 100%;
+      display: none;
+
+      @media (max-width: 1024px) {
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &__img-3 {
+      max-width: 100%;
+      display: none;
+      margin: auto;
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        display: block;
+      }
     }
 
     &__right {
@@ -580,12 +655,19 @@ body {
       flex-direction: column;
       gap: 4rem;
       max-width: 35.2rem;
+
+      @media (max-width: 1024px) {
+        max-width: 30.4rem;
+      }
+      @media (max-width: 768px) {
+        // width: 100%;
+      }
     }
 
     &__icons {
       display: flex;
-      gap: 6.55rem;
-      margin-top: 2rem;
+      justify-content: space-between;
+      // gap: 6.55rem;
     }
     &__icon {
       display: flex;
@@ -617,8 +699,11 @@ body {
     }
     &__pagination {
       display: flex;
-
       align-items: center;
+
+      @media (max-width: 768px) {
+        justify-content: center;
+      }
 
       &_arrow {
         color: $neutrals-4;
@@ -640,8 +725,29 @@ body {
   &-bottom {
     display: flex;
 
+    // @media (max-width: 1024px) {
+    //   flex-wrap: wrap;
+    // }
+
+    flex-wrap: wrap;
+
     &__col-1 {
-      margin-right: 5.2rem;
+      padding-right: 2.4rem;
+      width: 40%;
+
+      @media (max-width: 1024px) {
+        width: 50%;
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+        padding-right: 0;
+      }
+
+      img.illustration {
+        width: 100%;
+        border-radius: 12px;
+      }
 
       .avatar {
         width: 4.8rem;
@@ -656,19 +762,29 @@ body {
       align-items: flex-start;
       justify-content: space-between;
       max-width: 44.8rem;
-      margin-top: 1.4rem;
+      margin-top: 1rem;
     }
 
     &__col-2 {
+      width: 40%;
       display: flex;
       flex-direction: column;
-      gap: 5.2rem;
+      gap: 2.6rem;
       max-width: 35.1rem;
-      margin-right: 6.4rem;
+      margin-right: 6rem;
+
+      @media (max-width: 1024px) {
+        width: 48%;
+        margin-right: 0;
+      }
 
       .news-card {
         gap: 2.4rem;
         display: flex;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
 
         img.illustration {
           max-width: 16rem;
@@ -686,7 +802,33 @@ body {
       }
     }
     &__col-3 {
+      width: 15%;
       position: relative;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 6.4rem;
+      }
+
+      .card-creators-helper {
+        @media (max-width: 1024px) {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+
+      .new-economy-hr {
+        display: none;
+
+        @media (max-width: 768px) {
+          display: block;
+          position: relative;
+          top: -3.5rem;
+        }
+      }
 
       .card-creators {
         display: flex;
@@ -713,6 +855,24 @@ body {
         }
       }
 
+      .card-creators:nth-child(4) {
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      .card-creators:nth-child(3) {
+        @media (max-width: 600px) {
+          display: none;
+        }
+      }
+
+      .card-creators:nth-child(2) {
+        @media (max-width: 400px) {
+          display: none;
+        }
+      }
+
       .card-creators::after {
         content: '';
         position: absolute;
@@ -720,11 +880,21 @@ body {
         height: 1px;
         background: $neutrals-6;
         bottom: -2rem;
+
+        @media (max-width: 1024px) {
+          width: 0;
+        }
       }
 
       .card-creators.without-hr::after {
         content: '';
         width: 0;
+      }
+
+      .card-creators-button {
+        @media (max-width: 1024px) {
+          display: none;
+        }
       }
     }
 
@@ -735,6 +905,10 @@ body {
       height: 51.2rem;
       background: $neutrals-6;
       left: -3.2rem;
+
+      @media (max-width: 1024px) {
+        width: 0;
+      }
     }
   }
 }
