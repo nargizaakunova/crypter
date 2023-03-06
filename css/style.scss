@@ -739,11 +739,6 @@ body {
 
   &-bottom {
     display: flex;
-
-    // @media (max-width: 1024px) {
-    //   flex-wrap: wrap;
-    // }
-
     flex-wrap: wrap;
 
     &__col-1 {
@@ -934,6 +929,14 @@ body {
   padding: 12.8rem 0;
   background-color: $neutrals-7;
 
+  @media (max-width: 1024px) {
+    padding: 11.2rem 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 6.4rem 0;
+  }
+
   &-helper {
     position: relative;
   }
@@ -1018,6 +1021,10 @@ body {
         height: 24.7rem;
         cursor: pointer;
 
+        @media (max-width: 768px) {
+          width: 22rem;
+        }
+
         &__top {
           display: flex;
           &-badge {
@@ -1090,7 +1097,15 @@ body {
 
 /* SECTION HOT BIDS */
 .hot-bid {
-  padding: 13.6rem 16rem;
+  padding: 13.6rem 0;
+
+  @media (max-width: 1024px) {
+    padding: 11.2rem 0 13.2rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 6.4rem 0;
+  }
 
   &__top {
     display: flex;
@@ -1100,9 +1115,13 @@ body {
 
   &__cards {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    row-gap: 5.2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 5.2rem 3.2rem;
+
+    @media (max-width: 1023px) {
+      flex-wrap: wrap;
+    }
 
     .hot-card {
       max-width: 25.6rem;
@@ -1139,6 +1158,19 @@ body {
           display: flex;
           gap: 0.4rem;
         }
+      }
+    }
+
+    .hot-card:nth-child(4) {
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }
+
+    .hot-card:nth-child(3),
+    .hot-card:nth-child(2) {
+      @media (max-width: 768px) {
+        display: none;
       }
     }
   }

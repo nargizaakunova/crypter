@@ -883,6 +883,16 @@ body {
   padding: 12.8rem 0;
   background-color: #f4f5f6;
 }
+@media (max-width: 1024px) {
+  .sellers {
+    padding: 11.2rem 0;
+  }
+}
+@media (max-width: 768px) {
+  .sellers {
+    padding: 6.4rem 0;
+  }
+}
 .sellers-helper {
   position: relative;
 }
@@ -962,6 +972,11 @@ body {
   height: 24.7rem;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .sellers__bottom .cards .card {
+    width: 22rem;
+  }
+}
 .sellers__bottom .cards .card__top {
   display: flex;
 }
@@ -1024,7 +1039,17 @@ body {
 
 /* SECTION HOT BIDS */
 .hot-bid {
-  padding: 13.6rem 16rem;
+  padding: 13.6rem 0;
+}
+@media (max-width: 1024px) {
+  .hot-bid {
+    padding: 11.2rem 0 13.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .hot-bid {
+    padding: 6.4rem 0;
+  }
 }
 .hot-bid__top {
   display: flex;
@@ -1033,9 +1058,14 @@ body {
 }
 .hot-bid__cards {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  row-gap: 5.2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 5.2rem 3.2rem;
+}
+@media (max-width: 1023px) {
+  .hot-bid__cards {
+    flex-wrap: wrap;
+  }
 }
 .hot-bid__cards .hot-card {
   max-width: 25.6rem;
@@ -1065,6 +1095,17 @@ body {
 .hot-bid__cards .hot-card__bottom-left {
   display: flex;
   gap: 0.4rem;
+}
+@media (max-width: 1200px) {
+  .hot-bid__cards .hot-card:nth-child(4) {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .hot-bid__cards .hot-card:nth-child(3),
+  .hot-bid__cards .hot-card:nth-child(2) {
+    display: none;
+  }
 }
 
 /* SECTION HOT COLLECTIONS */
