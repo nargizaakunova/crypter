@@ -74,6 +74,10 @@ body {
   background-color: #23262f !important;
 }
 
+.background-neutral-4 {
+  background-color: #23262f !important;
+}
+
 .container {
   max-width: 112rem;
   margin: 0 auto;
@@ -157,6 +161,16 @@ body {
   line-height: 4rem;
   letter-spacing: -0.01em;
   color: #141416;
+}
+
+.hairline-2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+  color: #b1b5c4;
 }
 
 .eth {
@@ -866,8 +880,11 @@ body {
 
 /* SECTION SELLERS */
 .sellers {
-  padding: 12.8rem 8.8rem;
+  padding: 12.8rem 0;
   background-color: #f4f5f6;
+}
+.sellers-helper {
+  position: relative;
 }
 .sellers__top {
   display: flex;
@@ -876,19 +893,62 @@ body {
   margin-top: 6rem;
   margin-bottom: 6.4rem;
 }
+@media (max-width: 500px) {
+  .sellers__top {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 2.4rem;
+  }
+}
 .sellers__top .icon {
   position: relative;
   top: -4px;
   left: 10px;
 }
-.sellers__bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.sellers__top .sellers-timeframe {
+  margin-bottom: 1.2rem;
+}
+.sellers-buttons .sellers-button_left {
+  position: absolute;
+  left: -7rem;
+  bottom: 12rem;
+}
+@media (max-width: 1230px) {
+  .sellers-buttons .sellers-button_left {
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+}
+.sellers-buttons .sellers-button_right {
+  position: absolute;
+  right: -7rem;
+  bottom: 12rem;
+}
+@media (max-width: 1230px) {
+  .sellers-buttons .sellers-button_right {
+    position: relative;
+    right: 0;
+    bottom: 0;
+  }
+}
+@media (max-width: 1230px) {
+  .sellers-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3.2rem;
+  }
 }
 .sellers__bottom .cards {
   display: flex;
   gap: 3.2rem;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  .sellers__bottom .cards {
+    flex-wrap: wrap;
+  }
 }
 .sellers__bottom .cards .card.active {
   height: 26.3rem;
@@ -944,6 +1004,22 @@ body {
 }
 .sellers__bottom .cards .card__bottom .name {
   margin-bottom: 0.2rem;
+}
+@media (max-width: 1230px) {
+  .sellers__bottom .cards .card:nth-child(5) {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .sellers__bottom .cards .card:nth-child(3),
+  .sellers__bottom .cards .card:nth-child(4) {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .sellers__bottom .cards .card:nth-child(2) {
+    display: none;
+  }
 }
 
 /* SECTION HOT BIDS */
