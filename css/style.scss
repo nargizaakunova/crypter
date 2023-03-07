@@ -1178,25 +1178,79 @@ body {
 
 /* SECTION HOT COLLECTIONS */
 .hot-collections {
-  padding: 12.8rem 16rem;
+  padding: 12.8rem 0rem;
   background-color: $neutrals-7;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    padding: 11.2rem 0rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 6.4rem 0rem;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btns {
+    @media (min-width: 1025px) {
+      display: none;
+    }
+
+    @media (max-width: 1024px) {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      height: 100px;
+      width: 100px;
+      position: absolute;
+      left: 50%;
+      margin-left: -45px;
+      bottom: -6%;
+      margin-top: -50px;
+    }
+  }
 
   &__cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 6.8rem;
+    gap: 3.2rem;
+
+    @media (max-width: 1024px) {
+      flex-wrap: wrap;
+    }
 
     .hot-coll-card {
       max-width: 35.2rem;
+      width: 33.33%;
+
+      @media (max-width: 1024px) {
+        width: 50%;
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
 
       .hot-coll-img {
         border-radius: 8px;
+        width: 100%;
       }
 
       .hot-coll-3cards {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 0.3rem;
         margin-bottom: 1.2rem;
+
+        &__bottom-img {
+          width: 33.33%;
+        }
       }
 
       .hot-coll-by-whom {
@@ -1218,6 +1272,18 @@ body {
           text-transform: uppercase;
           color: $neutrals-2;
         }
+      }
+    }
+
+    .hot-coll-card:nth-child(3) {
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+
+    .hot-coll-card:nth-child(2) {
+      @media (max-width: 768px) {
+        display: none;
       }
     }
   }

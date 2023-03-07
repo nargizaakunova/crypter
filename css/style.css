@@ -1110,24 +1110,82 @@ body {
 
 /* SECTION HOT COLLECTIONS */
 .hot-collections {
-  padding: 12.8rem 16rem;
+  padding: 12.8rem 0rem;
   background-color: #f4f5f6;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .hot-collections {
+    padding: 11.2rem 0rem;
+  }
+}
+@media (max-width: 768px) {
+  .hot-collections {
+    padding: 6.4rem 0rem;
+  }
+}
+.hot-collections__top {
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 1025px) {
+  .hot-collections__btns {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .hot-collections__btns {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .hot-collections__btns {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -45px;
+    bottom: -6%;
+    margin-top: -50px;
+  }
 }
 .hot-collections__cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 6.8rem;
+  gap: 3.2rem;
+}
+@media (max-width: 1024px) {
+  .hot-collections__cards {
+    flex-wrap: wrap;
+  }
 }
 .hot-collections__cards .hot-coll-card {
   max-width: 35.2rem;
+  width: 33.33%;
+}
+@media (max-width: 1024px) {
+  .hot-collections__cards .hot-coll-card {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .hot-collections__cards .hot-coll-card {
+    width: 100%;
+  }
 }
 .hot-collections__cards .hot-coll-card .hot-coll-img {
   border-radius: 8px;
+  width: 100%;
 }
 .hot-collections__cards .hot-coll-card .hot-coll-3cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 0.3rem;
   margin-bottom: 1.2rem;
+}
+.hot-collections__cards .hot-coll-card .hot-coll-3cards__bottom-img {
+  width: 33.33%;
 }
 .hot-collections__cards .hot-coll-card .hot-coll-by-whom {
   display: flex;
@@ -1146,6 +1204,16 @@ body {
   line-height: 1.2rem;
   text-transform: uppercase;
   color: #23262f;
+}
+@media (max-width: 1024px) {
+  .hot-collections__cards .hot-coll-card:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .hot-collections__cards .hot-coll-card:nth-child(2) {
+    display: none;
+  }
 }
 
 /* SECTION DISCOVER */
