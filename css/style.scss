@@ -54,6 +54,10 @@ body {
   margin-bottom: 2.4rem;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .color-blue {
   color: $blue !important;
 }
@@ -77,6 +81,7 @@ body {
 .borderless {
   border: none !important;
 }
+
 .background-violet {
   background-color: $violet !important;
 }
@@ -1124,7 +1129,8 @@ body {
     }
 
     .hot-card {
-      max-width: 25.6rem;
+      // max-width: 25.6rem;
+      max-width: 24rem;
 
       &__img {
         width: 100%;
@@ -1291,8 +1297,22 @@ body {
 
 /* SECTION DISCOVER */
 .discover {
-  padding: 12.8em 16rem;
+  padding: 12.8em 0rem;
   background-color: $neutrals-8;
+
+  @media (max-width: 1024px) {
+    padding: 11.2rem 0;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 6.4rem 0;
+  }
+
+  .discover-hr {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
 
   &__nav {
     display: flex;
@@ -1301,25 +1321,88 @@ body {
     margin-top: 8rem;
     margin-bottom: 3.2rem;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 0.8rem;
+      margin-top: 6.4rem;
+    }
+
+    @media (max-width: 400px) {
+      align-items: center;
+      margin-top: 3.2rem;
+    }
+
     .nav-left {
-      select {
+      select.recently-added-filter {
         width: 18rem;
+        @media (max-width: 768px) {
+          width: 25.6rem;
+        }
+      }
+    }
+
+    .nav-middle {
+      .all-items-mobile-btn {
+        display: none;
+
+        @media (max-width: 768px) {
+          display: block;
+        }
+      }
+
+      .music-btn,
+      .video-btn {
+        @media (max-width: 1024px) {
+          display: none;
+        }
+      }
+
+      .all-items-btn,
+      .art-btn,
+      .game-btn,
+      .photography-btn {
+        @media (max-width: 768px) {
+          display: none;
+        }
       }
     }
 
     .nav-right {
-      a {
+      a.filter-btn {
         margin-right: 0;
         display: inline-block;
         width: 116px;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+    }
+
+    .advanced-filter-btn {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: block;
+        width: 25.6rem;
       }
     }
   }
 
   &__filters {
     display: flex;
-    gap: 5rem;
     margin-bottom: 3.4rem;
+    justify-content: space-between;
+
+    @media (max-width: 800px) {
+      flex-wrap: wrap;
+      row-gap: 2.4rem;
+    }
+
+    @media (max-width: 400px) {
+      display: none;
+    }
 
     .discover-filter {
       display: flex;
@@ -1340,12 +1423,23 @@ body {
     .discover-filter.different {
       gap: 0;
     }
+
+    .creator-filter {
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
   }
+
   &__button {
     display: block;
     margin: 5.2rem auto 0;
     width: 13.2rem;
     height: 4rem;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
 
     &-svg {
       position: relative;
@@ -1353,8 +1447,19 @@ body {
       left: 0.4rem;
     }
   }
+
   hr {
     margin-bottom: 3.2rem;
+  }
+
+  &__btns {
+    @media (min-width: 769px) {
+      display: none;
+    }
+
+    display: flex;
+    justify-content: center;
+    margin-top: 5.2rem;
   }
 }
 

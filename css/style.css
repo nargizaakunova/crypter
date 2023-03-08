@@ -38,6 +38,10 @@ body {
   margin-bottom: 2.4rem;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .color-blue {
   color: #3772ff !important;
 }
@@ -1068,7 +1072,7 @@ body {
   }
 }
 .hot-bid__cards .hot-card {
-  max-width: 25.6rem;
+  max-width: 24rem;
 }
 .hot-bid__cards .hot-card__img {
   width: 100%;
@@ -1218,8 +1222,23 @@ body {
 
 /* SECTION DISCOVER */
 .discover {
-  padding: 12.8em 16rem;
+  padding: 12.8em 0rem;
   background-color: #fcfcfd;
+}
+@media (max-width: 1024px) {
+  .discover {
+    padding: 11.2rem 0;
+  }
+}
+@media (max-width: 1024px) {
+  .discover {
+    padding: 6.4rem 0;
+  }
+}
+@media (max-width: 768px) {
+  .discover .discover-hr {
+    display: none;
+  }
 }
 .discover__nav {
   display: flex;
@@ -1228,18 +1247,84 @@ body {
   margin-top: 8rem;
   margin-bottom: 3.2rem;
 }
-.discover__nav .nav-left select {
+@media (max-width: 768px) {
+  .discover__nav {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0.8rem;
+    margin-top: 6.4rem;
+  }
+}
+@media (max-width: 400px) {
+  .discover__nav {
+    align-items: center;
+    margin-top: 3.2rem;
+  }
+}
+.discover__nav .nav-left select.recently-added-filter {
   width: 18rem;
 }
-.discover__nav .nav-right a {
+@media (max-width: 768px) {
+  .discover__nav .nav-left select.recently-added-filter {
+    width: 25.6rem;
+  }
+}
+.discover__nav .nav-middle .all-items-mobile-btn {
+  display: none;
+}
+@media (max-width: 768px) {
+  .discover__nav .nav-middle .all-items-mobile-btn {
+    display: block;
+  }
+}
+@media (max-width: 1024px) {
+  .discover__nav .nav-middle .music-btn,
+  .discover__nav .nav-middle .video-btn {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .discover__nav .nav-middle .all-items-btn,
+  .discover__nav .nav-middle .art-btn,
+  .discover__nav .nav-middle .game-btn,
+  .discover__nav .nav-middle .photography-btn {
+    display: none;
+  }
+}
+.discover__nav .nav-right a.filter-btn {
   margin-right: 0;
   display: inline-block;
   width: 116px;
 }
+@media (max-width: 768px) {
+  .discover__nav .nav-right a.filter-btn {
+    display: none;
+  }
+}
+.discover__nav .advanced-filter-btn {
+  display: none;
+}
+@media (max-width: 768px) {
+  .discover__nav .advanced-filter-btn {
+    display: block;
+    width: 25.6rem;
+  }
+}
 .discover__filters {
   display: flex;
-  gap: 5rem;
   margin-bottom: 3.4rem;
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .discover__filters {
+    flex-wrap: wrap;
+    row-gap: 2.4rem;
+  }
+}
+@media (max-width: 400px) {
+  .discover__filters {
+    display: none;
+  }
 }
 .discover__filters .discover-filter {
   display: flex;
@@ -1258,11 +1343,21 @@ body {
 .discover__filters .discover-filter.different {
   gap: 0;
 }
+@media (max-width: 1024px) {
+  .discover__filters .creator-filter {
+    display: none;
+  }
+}
 .discover__button {
   display: block;
   margin: 5.2rem auto 0;
   width: 13.2rem;
   height: 4rem;
+}
+@media (max-width: 768px) {
+  .discover__button {
+    display: none;
+  }
 }
 .discover__button-svg {
   position: relative;
@@ -1271,6 +1366,16 @@ body {
 }
 .discover hr {
   margin-bottom: 3.2rem;
+}
+.discover__btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 5.2rem;
+}
+@media (min-width: 769px) {
+  .discover__btns {
+    display: none;
+  }
 }
 
 /* SECTION EARN CRYPTO */
