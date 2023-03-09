@@ -1379,6 +1379,12 @@ body {
 }
 
 /* SECTION EARN CRYPTO */
+@media (max-width: 768px) {
+  .earn-crypto-hr {
+    display: none;
+  }
+}
+
 .earn-crypto {
   padding: 8rem 0;
   background-color: #fcfcfd;
@@ -1388,9 +1394,19 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.earn-crypto__left {
-  flex-shrink: 0;
-  flex-basis: 54.5rem;
+@media (max-width: 768px) {
+  .earn-crypto__block {
+    flex-direction: column;
+    row-gap: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .earn-crypto__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 .earn-crypto__left .save-time-subheading {
   margin-bottom: 1.2rem;
@@ -1406,8 +1422,27 @@ body {
   display: flex;
   gap: 1.6rem;
 }
+@media (max-width: 768px) {
+  .earn-crypto__buttons {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+}
+@media (max-width: 400px) {
+  .earn-crypto__buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .earn-crypto__right {
   max-width: 64rem;
+}
+@media (max-width: 768px) {
+  .earn-crypto__right {
+    max-width: 31rem;
+  }
 }
 .earn-crypto__right-img {
   width: 100%;
