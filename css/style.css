@@ -1457,12 +1457,53 @@ body {
   justify-content: space-between;
   margin-bottom: 4.8rem;
 }
+@media (max-width: 900px) {
+  .footer__content {
+    flex-direction: column;
+    row-gap: 3.2rem;
+  }
+}
 .footer__col-1 {
   flex-basis: 22.2rem;
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
-  margin-right: 19.2rem;
+  margin-right: 12.8rem;
+}
+@media (max-width: 1024px) {
+  .footer__col-1 {
+    margin-right: 3.4rem;
+  }
+}
+@media (max-width: 900px) {
+  .footer__col-1 {
+    flex-basis: auto;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .footer__col-1 .footer-subtitle {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #23262f;
+  }
+}
+.footer__col-2-helper {
+  display: flex;
+}
+@media (max-width: 900px) {
+  .footer__col-2-helper {
+    flex-direction: column;
+    row-gap: 3.2rem;
+  }
+}
+@media (min-width: 769px) {
+  .footer .footer-hr {
+    display: none;
+  }
 }
 .footer__col-2 .footer-section-heading {
   margin-bottom: 4rem;
@@ -1475,6 +1516,11 @@ body {
 }
 .footer__col-4 {
   width: 35.2rem;
+}
+@media (max-width: 768px) {
+  .footer__col-4 {
+    width: auto;
+  }
 }
 .footer__col-4 .footer-section-heading {
   margin-bottom: 4rem;
@@ -1501,6 +1547,11 @@ body {
   outline: none;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .footer__col-4 .footer__search {
+    width: 100%;
+  }
+}
 .footer__col-4 .footer__search[type=search]::-webkit-search-cancel-button {
   -webkit-appearance: none;
           appearance: none;
@@ -1522,8 +1573,30 @@ body {
 .footer__bottom {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   margin-top: 3.2rem;
 }
 .footer__bottom .footer-accept {
   margin-left: 1.6rem;
+}
+@media (max-width: 768px) {
+  .footer__cookies {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .footer-icon-helper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+.footer-icon-shape {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .footer-icon-shape {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
