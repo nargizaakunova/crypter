@@ -1599,4 +1599,110 @@ body {
   .footer-icon-shape {
     display: block;
   }
+}
+
+.upload-header {
+  border: none;
+}
+
+.navigations {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 0;
+  border-top: #e6e8ec 1px solid;
+  border-bottom: #e6e8ec 1px solid;
+}
+.navigations-right {
+  display: flex;
+  gap: 3.3rem;
+}
+@media (max-width: 500px) {
+  .navigations-right {
+    display: none;
+  }
+}
+
+.upload-item {
+  padding: 8rem 0 13.6rem;
+}
+@media (max-width: 768px) {
+  .upload-item {
+    padding: 3.2rem 0 6.4rem;
+  }
+}
+
+.upload-top {
+  margin: auto;
+  max-width: 634px;
+  text-align: center;
+}
+.upload-top .subheading-upload {
+  margin-top: 1.6rem;
+  margin-bottom: 9.6rem;
+  max-width: 73.6rem;
+}
+@media (max-width: 768px) {
+  .upload-top .subheading-upload {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.upload-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.2rem;
+  justify-content: center;
+}
+@media (max-width: 400px) {
+  .upload-images {
+    justify-content: flex-start;
+  }
+}
+.upload-images .upload-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  border: 1px solid #e6e8ec;
+  border-radius: 16px;
+  padding: 1.6rem 1.6rem 2.4rem;
+}
+@media (max-width: 400px) {
+  .upload-images .upload-card {
+    flex-direction: row;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e6e8ec;
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 400px) {
+  .upload-images .upload-card .update-img {
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 50%;
+  }
+}
+@media (max-width: 400px) {
+  .upload-images .upload-card .upload-btn {
+    border: none;
+    background-color: transparent;
+    color: #23262f;
+    margin-right: auto;
+  }
+}
+.upload-images .upload-card .upload-arrow-shape {
+  display: none;
+}
+@media (max-width: 400px) {
+  .upload-images .upload-card .upload-arrow-shape {
+    display: block;
+  }
+}
+
+.add-info-upload {
+  text-align: center;
+  margin-top: 3.2rem;
 }/*# sourceMappingURL=style.css.map */
