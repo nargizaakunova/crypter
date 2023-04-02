@@ -1797,3 +1797,46 @@ body {
   text-align: center;
   margin-top: 3.2rem;
 }
+
+// CONNECT YOUR WALLET PAGE
+.connect-wallet {
+  padding: 8rem 0 13.6rem;
+
+  @media (max-width: 1024px) {
+    padding: 6.4rem 0 11.2rem;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 3.6rem 0 5rem;
+  }
+
+  &-top {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    border-bottom: 2px $neutrals-6 solid;
+    padding-bottom: 4rem;
+
+    .connect-heading {
+      @media (max-width: 768px) {
+        font-family: $primary-font;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+        color: $neutrals-2;
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    &-left {
+      display: flex;
+      flex-direction: column;
+    }
+    &-right {
+    }
+  }
+}
